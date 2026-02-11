@@ -1,0 +1,79 @@
+table 'mortimer_nfl game'
+	lineageTag: 0eff0153-bea7-4864-84bc-5c6729a5ed50
+
+	column game_id
+		dataType: int64
+		formatString: 0
+		lineageTag: adb9b039-7f93-46c1-a9f1-f2c853892483
+		summarizeBy: none
+		sourceColumn: game_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column game_type_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 380954cf-df33-4ac2-8a13-48c060776c07
+		summarizeBy: none
+		sourceColumn: game_type_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column week
+		dataType: int64
+		formatString: 0
+		lineageTag: 94205f9e-2eb5-4916-b11a-716537599bcb
+		summarizeBy: sum
+		sourceColumn: week
+
+		annotation SummarizationSetBy = Automatic
+
+	column home_team_id
+		dataType: int64
+		formatString: 0
+		lineageTag: dc9b51d3-99c4-4041-a173-5cdd31100865
+		summarizeBy: sum
+		sourceColumn: home_team_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column away_team_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ba2f30cc-a272-4b54-b9cf-4b790a27b914
+		summarizeBy: sum
+		sourceColumn: away_team_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2166b06d-0765-43e4-9fc9-343bbd2a19be
+		summarizeBy: none
+		sourceColumn: created_date
+
+		variation Variation
+			isDefault
+			relationship: 838b12c4-cda0-4657-9078-45aee6d10f7e
+			defaultHierarchy: LocalDateTable_9e34a27d-0d33-4a72-87b6-8463bf2c84ca.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column create_user
+		dataType: string
+		lineageTag: 89885c4a-30ea-4032-bbd5-5a1040694a26
+		summarizeBy: none
+		sourceColumn: create_user
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'mortimer_nfl game' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("thefog", "mortimer_dev"),
+				    mortimer_nfl_game = Source{[Schema="mortimer_nfl",Item="game"]}[Data]
+				in
+				    mortimer_nfl_game
+

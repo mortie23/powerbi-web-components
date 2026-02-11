@@ -1,0 +1,75 @@
+table 'mortimer_nfl team_lookup'
+	lineageTag: 5b734984-953a-46a1-9368-f31ee2e6e910
+
+	column team_id
+		dataType: int64
+		formatString: 0
+		lineageTag: f63120c0-9a8a-4c05-b197-47b155340c3e
+		summarizeBy: none
+		sourceColumn: team_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column team
+		dataType: string
+		lineageTag: 9a434c41-c234-4ac0-94a4-89d94f425748
+		summarizeBy: none
+		sourceColumn: team
+
+		annotation SummarizationSetBy = Automatic
+
+	column team_short
+		dataType: string
+		lineageTag: d2c7d0ac-a0ee-467e-8f8a-89e604b392b7
+		summarizeBy: none
+		sourceColumn: team_short
+
+		annotation SummarizationSetBy = Automatic
+
+	column conference
+		dataType: string
+		lineageTag: 070f1238-36e9-4767-a309-298578c476c3
+		summarizeBy: none
+		sourceColumn: conference
+
+		annotation SummarizationSetBy = Automatic
+
+	column division
+		dataType: string
+		lineageTag: d6072339-0296-418d-9a32-b0726037a598
+		summarizeBy: none
+		sourceColumn: division
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a4fe8bda-d8bb-4a65-9eeb-7db17cff6b1b
+		summarizeBy: none
+		sourceColumn: created_date
+
+		variation Variation
+			isDefault
+			relationship: b368c61b-91e5-4119-a97f-57c93e9c3718
+			defaultHierarchy: LocalDateTable_baf0fdc5-35be-4651-95e7-04e98cc5941a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column create_user
+		dataType: string
+		lineageTag: 5c194139-433a-4bff-902c-27ac284e09b9
+		summarizeBy: none
+		sourceColumn: create_user
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'mortimer_nfl team_lookup' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("thefog", "mortimer_dev"),
+				    mortimer_nfl_team_lookup = Source{[Schema="mortimer_nfl",Item="team_lookup"]}[Data]
+				in
+				    mortimer_nfl_team_lookup
+

@@ -1,0 +1,744 @@
+table 'mortimer_nfl game_stats'
+	lineageTag: d810f5e0-2317-4dac-8574-4a9a562bbd3b
+
+	column game_team_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 1755d526-e608-4be9-912f-492b5ee247b7
+		summarizeBy: sum
+		sourceColumn: game_team_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column game_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d8e2db2-9d85-4368-b540-e999b0f71aec
+		summarizeBy: none
+		sourceColumn: game_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column team_id
+		dataType: int64
+		formatString: 0
+		lineageTag: e475b744-09a4-4dee-82bd-6ac2327f9acb
+		summarizeBy: none
+		sourceColumn: team_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_first_downs
+		dataType: int64
+		formatString: 0
+		lineageTag: 11f92333-9216-4ee5-aeb8-0adc2cadc6cb
+		summarizeBy: sum
+		sourceColumn: total_first_downs
+
+		annotation SummarizationSetBy = Automatic
+
+	column passing_first_downs
+		dataType: int64
+		formatString: 0
+		lineageTag: f08b18e2-cf5c-41e1-adbf-d05f5c8e002a
+		summarizeBy: sum
+		sourceColumn: passing_first_downs
+
+		annotation SummarizationSetBy = Automatic
+
+	column rushing_first_downs
+		dataType: int64
+		formatString: 0
+		lineageTag: 60297cc0-3e1d-44f5-9021-2d1cd8770346
+		summarizeBy: sum
+		sourceColumn: rushing_first_downs
+
+		annotation SummarizationSetBy = Automatic
+
+	column penalty_first_downs
+		dataType: int64
+		formatString: 0
+		lineageTag: ecd044d1-002f-4bdd-a0f6-a65de8c65cd1
+		summarizeBy: sum
+		sourceColumn: penalty_first_downs
+
+		annotation SummarizationSetBy = Automatic
+
+	column third_down_attempts
+		dataType: int64
+		formatString: 0
+		lineageTag: 749a7e88-1278-47e6-9196-9ed6e6d6ef30
+		summarizeBy: sum
+		sourceColumn: third_down_attempts
+
+		annotation SummarizationSetBy = Automatic
+
+	column third_down_conversions
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b61bc72-ec88-40f5-a26a-8e0c9b50dd39
+		summarizeBy: sum
+		sourceColumn: third_down_conversions
+
+		annotation SummarizationSetBy = Automatic
+
+	column third_down_conversion_perc
+		dataType: double
+		lineageTag: 3296e177-796c-48f3-b18c-ff34db9e8f3d
+		summarizeBy: sum
+		sourceColumn: third_down_conversion_perc
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column third_down_passing_conversions
+		dataType: int64
+		formatString: 0
+		lineageTag: fc30209b-0e03-4156-864d-5c3ffda0587a
+		summarizeBy: sum
+		sourceColumn: third_down_passing_conversions
+
+		annotation SummarizationSetBy = Automatic
+
+	column third_down_rushing_conversions
+		dataType: int64
+		formatString: 0
+		lineageTag: 6ace96d3-ce3e-4937-9d2b-9ae790cb0933
+		summarizeBy: sum
+		sourceColumn: third_down_rushing_conversions
+
+		annotation SummarizationSetBy = Automatic
+
+	column third_down_penalty_conversions
+		dataType: int64
+		formatString: 0
+		lineageTag: cb49fe62-5068-425c-b56a-fd31bdbb2175
+		summarizeBy: sum
+		sourceColumn: third_down_penalty_conversions
+
+		annotation SummarizationSetBy = Automatic
+
+	column fourth_down_attempts
+		dataType: int64
+		formatString: 0
+		lineageTag: 853675a1-778f-4e63-bd5d-b0982c5ac734
+		summarizeBy: sum
+		sourceColumn: fourth_down_attempts
+
+		annotation SummarizationSetBy = Automatic
+
+	column fourth_down_conversions
+		dataType: int64
+		formatString: 0
+		lineageTag: 83838e71-e527-4f42-b80b-732a7bd98cd6
+		summarizeBy: sum
+		sourceColumn: fourth_down_conversions
+
+		annotation SummarizationSetBy = Automatic
+
+	column fourth_down_conversion_perc
+		dataType: double
+		lineageTag: d8252305-4351-4a2d-9bf7-a98edaaa56b0
+		summarizeBy: sum
+		sourceColumn: fourth_down_conversion_perc
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fourth_down_passing_conversions
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b06cbac-8b1c-48a8-9f38-8ee7d9c7852d
+		summarizeBy: sum
+		sourceColumn: fourth_down_passing_conversions
+
+		annotation SummarizationSetBy = Automatic
+
+	column fourth_down_rushing_conversions
+		dataType: int64
+		formatString: 0
+		lineageTag: a75c4c1e-647d-49a4-b52e-0c6b9d761c2c
+		summarizeBy: sum
+		sourceColumn: fourth_down_rushing_conversions
+
+		annotation SummarizationSetBy = Automatic
+
+	column fourth_down_penalty_conversions
+		dataType: int64
+		formatString: 0
+		lineageTag: 525c25c1-8392-482d-8477-641076b9a217
+		summarizeBy: sum
+		sourceColumn: fourth_down_penalty_conversions
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_plays
+		dataType: int64
+		formatString: 0
+		lineageTag: 3a6f8fe5-7259-4113-b549-5ae346e65a0d
+		summarizeBy: sum
+		sourceColumn: total_plays
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_yards
+		dataType: int64
+		formatString: 0
+		lineageTag: 37d3f558-2396-4f86-a090-796a0053f5e2
+		summarizeBy: sum
+		sourceColumn: total_yards
+
+		annotation SummarizationSetBy = Automatic
+
+	column yards_per_play
+		dataType: double
+		lineageTag: 0f8ab698-4fa6-4e2a-bf75-bacd579cb209
+		summarizeBy: sum
+		sourceColumn: yards_per_play
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column rushing_plays
+		dataType: int64
+		formatString: 0
+		lineageTag: 37820c82-1e73-44c0-bc05-813a6b6013e7
+		summarizeBy: sum
+		sourceColumn: rushing_plays
+
+		annotation SummarizationSetBy = Automatic
+
+	column rushing_yards
+		dataType: int64
+		formatString: 0
+		lineageTag: 0baa775d-ba04-4d47-9bd8-dad712ce888f
+		summarizeBy: sum
+		sourceColumn: rushing_yards
+
+		annotation SummarizationSetBy = Automatic
+
+	column rushing_yards_per_play
+		dataType: double
+		lineageTag: 69bc2050-e802-4e83-874e-f80c34fd1a1c
+		summarizeBy: sum
+		sourceColumn: rushing_yards_per_play
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column passing_plays
+		dataType: int64
+		formatString: 0
+		lineageTag: b4ff36ea-b4fd-49a9-94ef-4d793a21b789
+		summarizeBy: sum
+		sourceColumn: passing_plays
+
+		annotation SummarizationSetBy = Automatic
+
+	column passing_completions
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ac4ab66-d25c-453d-b46b-539b810ddf89
+		summarizeBy: sum
+		sourceColumn: passing_completions
+
+		annotation SummarizationSetBy = Automatic
+
+	column passing_yards_per_play
+		dataType: double
+		lineageTag: c119f18c-1042-4ca3-b67d-8b2ab83eb0c0
+		summarizeBy: sum
+		sourceColumn: passing_yards_per_play
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column interceptions
+		dataType: int64
+		formatString: 0
+		lineageTag: 9197c2b5-315b-4da8-8288-ffdd64dffea5
+		summarizeBy: sum
+		sourceColumn: interceptions
+
+		annotation SummarizationSetBy = Automatic
+
+	column sacks
+		dataType: int64
+		formatString: 0
+		lineageTag: 01b741db-a30c-464f-918a-fc7cbd397e19
+		summarizeBy: sum
+		sourceColumn: sacks
+
+		annotation SummarizationSetBy = Automatic
+
+	column net_passing_yards
+		dataType: int64
+		formatString: 0
+		lineageTag: 55f0d496-5552-45ac-8b86-4c92c2b7e597
+		summarizeBy: sum
+		sourceColumn: net_passing_yards
+
+		annotation SummarizationSetBy = Automatic
+
+	column gross_passing_yards
+		dataType: int64
+		formatString: 0
+		lineageTag: f8998c01-814c-4a69-a1c8-18e612888d73
+		summarizeBy: sum
+		sourceColumn: gross_passing_yards
+
+		annotation SummarizationSetBy = Automatic
+
+	column sack_yards
+		dataType: int64
+		formatString: 0
+		lineageTag: d6339bfa-a7bb-46af-a5b7-d3b3c30ab760
+		summarizeBy: sum
+		sourceColumn: sack_yards
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_return_yards
+		dataType: int64
+		formatString: 0
+		lineageTag: 3220091a-1d8d-47d2-96f0-0cc2fddd2271
+		summarizeBy: sum
+		sourceColumn: total_return_yards
+
+		annotation SummarizationSetBy = Automatic
+
+	column punt_returns
+		dataType: int64
+		formatString: 0
+		lineageTag: 3664da74-03ff-4db7-b215-41b0fe0c57a4
+		summarizeBy: sum
+		sourceColumn: punt_returns
+
+		annotation SummarizationSetBy = Automatic
+
+	column punt_return_yards
+		dataType: int64
+		formatString: 0
+		lineageTag: e80d96b4-d890-4873-9429-60eb4dc20250
+		summarizeBy: sum
+		sourceColumn: punt_return_yards
+
+		annotation SummarizationSetBy = Automatic
+
+	column kick_off_returns
+		dataType: int64
+		formatString: 0
+		lineageTag: 2912c1ec-eb5b-4d52-aa51-414afcadbed8
+		summarizeBy: sum
+		sourceColumn: kick_off_returns
+
+		annotation SummarizationSetBy = Automatic
+
+	column kick_off_return_yards
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f9787f9-5228-4976-bf05-484d1488ffbd
+		summarizeBy: sum
+		sourceColumn: kick_off_return_yards
+
+		annotation SummarizationSetBy = Automatic
+
+	column interception_returns
+		dataType: int64
+		formatString: 0
+		lineageTag: d21a7326-7729-4c85-96e8-f7a84d05f26b
+		summarizeBy: sum
+		sourceColumn: interception_returns
+
+		annotation SummarizationSetBy = Automatic
+
+	column interception_return_yards
+		dataType: int64
+		formatString: 0
+		lineageTag: b48ed514-4e1d-4331-8f7c-907f5c100792
+		summarizeBy: sum
+		sourceColumn: interception_return_yards
+
+		annotation SummarizationSetBy = Automatic
+
+	column kick_offs
+		dataType: int64
+		formatString: 0
+		lineageTag: c3daaa45-ee28-4d52-a43d-d341cfe44fc7
+		summarizeBy: sum
+		sourceColumn: kick_offs
+
+		annotation SummarizationSetBy = Automatic
+
+	column kick_offs_in_endzone
+		dataType: int64
+		formatString: 0
+		lineageTag: e2882117-cf7a-40a0-9618-277e8d3f22e8
+		summarizeBy: sum
+		sourceColumn: kick_offs_in_endzone
+
+		annotation SummarizationSetBy = Automatic
+
+	column touchbacks
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d236249-a5fd-4c5d-b839-a95a5fa7a8b7
+		summarizeBy: sum
+		sourceColumn: touchbacks
+
+		annotation SummarizationSetBy = Automatic
+
+	column punts
+		dataType: int64
+		formatString: 0
+		lineageTag: 918b9e17-72c6-46de-84c1-e9715a2948b6
+		summarizeBy: sum
+		sourceColumn: punts
+
+		annotation SummarizationSetBy = Automatic
+
+	column average_punt_yards
+		dataType: double
+		lineageTag: 3840c334-c7a1-46c1-9978-3f9e7bca2da0
+		summarizeBy: sum
+		sourceColumn: average_punt_yards
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column punts_blocked
+		dataType: int64
+		formatString: 0
+		lineageTag: 624d2992-09c2-496d-9a66-e364b2286b3e
+		summarizeBy: sum
+		sourceColumn: punts_blocked
+
+		annotation SummarizationSetBy = Automatic
+
+	column average_net_punt_yards
+		dataType: double
+		lineageTag: 6e5427de-8b0a-4a10-8531-cd112aa65bab
+		summarizeBy: sum
+		sourceColumn: average_net_punt_yards
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column penalties
+		dataType: int64
+		formatString: 0
+		lineageTag: 57106a56-9b2f-4f0d-89fe-a927abae48b0
+		summarizeBy: sum
+		sourceColumn: penalties
+
+		annotation SummarizationSetBy = Automatic
+
+	column penalty_yards
+		dataType: int64
+		formatString: 0
+		lineageTag: 84838d61-c9d8-4108-8610-b647d10bab0c
+		summarizeBy: sum
+		sourceColumn: penalty_yards
+
+		annotation SummarizationSetBy = Automatic
+
+	column fumbles
+		dataType: int64
+		formatString: 0
+		lineageTag: 930a50c6-90cb-4567-b1f1-a6b047cd4877
+		summarizeBy: sum
+		sourceColumn: fumbles
+
+		annotation SummarizationSetBy = Automatic
+
+	column fumbles_lost
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c1a69e8-1d26-43e9-ad32-ec1be81e0596
+		summarizeBy: sum
+		sourceColumn: fumbles_lost
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_td
+		dataType: int64
+		formatString: 0
+		lineageTag: 20855da4-b82b-463d-b91b-49db6cdd9fa1
+		summarizeBy: sum
+		sourceColumn: total_td
+
+		annotation SummarizationSetBy = Automatic
+
+	column passing_td
+		dataType: int64
+		formatString: 0
+		lineageTag: d6965383-6a65-4e06-aafe-2781564bd5c3
+		summarizeBy: sum
+		sourceColumn: passing_td
+
+		annotation SummarizationSetBy = Automatic
+
+	column rushing_td
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f0e1b68-a4b7-4db2-a6d5-6ef7b018ca5f
+		summarizeBy: sum
+		sourceColumn: rushing_td
+
+		annotation SummarizationSetBy = Automatic
+
+	column interception_td
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f63a852-e36c-4a32-bcd0-93368f8dd698
+		summarizeBy: sum
+		sourceColumn: interception_td
+
+		annotation SummarizationSetBy = Automatic
+
+	column fumble_td
+		dataType: int64
+		formatString: 0
+		lineageTag: fae97193-fe22-4a1a-aa4f-71f24267763c
+		summarizeBy: sum
+		sourceColumn: fumble_td
+
+		annotation SummarizationSetBy = Automatic
+
+	column punt_return_td
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b9429b8-0c2f-4d38-a467-833ac7e780e7
+		summarizeBy: sum
+		sourceColumn: punt_return_td
+
+		annotation SummarizationSetBy = Automatic
+
+	column kick_off_return_td
+		dataType: int64
+		formatString: 0
+		lineageTag: d561d542-13e8-4430-8e08-e389484bad67
+		summarizeBy: sum
+		sourceColumn: kick_off_return_td
+
+		annotation SummarizationSetBy = Automatic
+
+	column field_goal_return_td
+		dataType: int64
+		formatString: 0
+		lineageTag: 952279a1-69e5-4138-8754-6df8554f2fe4
+		summarizeBy: sum
+		sourceColumn: field_goal_return_td
+
+		annotation SummarizationSetBy = Automatic
+
+	column extra_point_attempts
+		dataType: int64
+		formatString: 0
+		lineageTag: 63dcaccf-4d1b-4bf1-87c6-5d79ce83d7e8
+		summarizeBy: sum
+		sourceColumn: extra_point_attempts
+
+		annotation SummarizationSetBy = Automatic
+
+	column extra_points_made
+		dataType: int64
+		formatString: 0
+		lineageTag: e254f887-687e-4032-94f0-687932ba679e
+		summarizeBy: sum
+		sourceColumn: extra_points_made
+
+		annotation SummarizationSetBy = Automatic
+
+	column extra_points_blocked
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c1e6afe-abff-4b09-9b2d-b0cf3ffa05c5
+		summarizeBy: sum
+		sourceColumn: extra_points_blocked
+
+		annotation SummarizationSetBy = Automatic
+
+	column two_point_conversion_attempts
+		dataType: int64
+		formatString: 0
+		lineageTag: 93b91734-550e-4cb4-bab2-20b454a8c7b5
+		summarizeBy: sum
+		sourceColumn: two_point_conversion_attempts
+
+		annotation SummarizationSetBy = Automatic
+
+	column two_point_conversions_made
+		dataType: int64
+		formatString: 0
+		lineageTag: b962f285-61ee-4158-989f-7972cbae98fc
+		summarizeBy: sum
+		sourceColumn: two_point_conversions_made
+
+		annotation SummarizationSetBy = Automatic
+
+	column field_goal_attempts
+		dataType: int64
+		formatString: 0
+		lineageTag: 08f6a835-1fc7-4be8-97e8-8ee785947a83
+		summarizeBy: sum
+		sourceColumn: field_goal_attempts
+
+		annotation SummarizationSetBy = Automatic
+
+	column field_goals_made
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b64c35f-8fbc-4737-ba4f-871aae1459c7
+		summarizeBy: sum
+		sourceColumn: field_goals_made
+
+		annotation SummarizationSetBy = Automatic
+
+	column field_goals_blocked
+		dataType: int64
+		formatString: 0
+		lineageTag: 01eb922d-dc19-40ba-9230-926d11a68c46
+		summarizeBy: sum
+		sourceColumn: field_goals_blocked
+
+		annotation SummarizationSetBy = Automatic
+
+	column redzone_visits
+		dataType: int64
+		formatString: 0
+		lineageTag: 107ec382-88e5-47e4-830a-45582ae6aa3c
+		summarizeBy: sum
+		sourceColumn: redzone_visits
+
+		annotation SummarizationSetBy = Automatic
+
+	column redzone_td
+		dataType: int64
+		formatString: 0
+		lineageTag: 858add28-2fb6-4c9d-9102-90dff3ab75a2
+		summarizeBy: sum
+		sourceColumn: redzone_td
+
+		annotation SummarizationSetBy = Automatic
+
+	column redzone_efficiency
+		dataType: double
+		lineageTag: fccb9f8a-8788-4c88-9e4e-4178730425bd
+		summarizeBy: sum
+		sourceColumn: redzone_efficiency
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column goal_to_go_attempts
+		dataType: int64
+		formatString: 0
+		lineageTag: bcf61bc3-98db-4362-889f-1a6f3c571f2f
+		summarizeBy: sum
+		sourceColumn: goal_to_go_attempts
+
+		annotation SummarizationSetBy = Automatic
+
+	column goal_to_go_td
+		dataType: int64
+		formatString: 0
+		lineageTag: 73ec31e9-cfc9-42b6-948a-62395a21a220
+		summarizeBy: sum
+		sourceColumn: goal_to_go_td
+
+		annotation SummarizationSetBy = Automatic
+
+	column goal_to_go_efficiency
+		dataType: int64
+		formatString: 0
+		lineageTag: 783ccd9d-e7b9-4cad-94e3-8174b679e09e
+		summarizeBy: sum
+		sourceColumn: goal_to_go_efficiency
+
+		annotation SummarizationSetBy = Automatic
+
+	column safeties
+		dataType: int64
+		formatString: 0
+		lineageTag: 97d1dacd-878a-4986-9349-d677a2a0feb3
+		summarizeBy: sum
+		sourceColumn: safeties
+
+		annotation SummarizationSetBy = Automatic
+
+	column turnovers
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e2ef623-232e-4987-8af8-3fe8c0408608
+		summarizeBy: sum
+		sourceColumn: turnovers
+
+		annotation SummarizationSetBy = Automatic
+
+	column points_scored
+		dataType: int64
+		formatString: 0
+		lineageTag: 054123ef-d6a4-4a9c-853e-745389889c4f
+		summarizeBy: sum
+		sourceColumn: points_scored
+
+		annotation SummarizationSetBy = Automatic
+
+	column time_of_possesion
+		dataType: double
+		lineageTag: afabe4ae-56e3-42d6-b9f7-e8d4c5730e44
+		summarizeBy: sum
+		sourceColumn: time_of_possesion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column win_loss
+		dataType: string
+		lineageTag: 8c4240f8-dc65-44d5-b1e0-bc5c1973a297
+		summarizeBy: none
+		sourceColumn: win_loss
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 005bb572-dee7-4cff-a266-d58c4ab211c7
+		summarizeBy: none
+		sourceColumn: created_date
+
+		variation Variation
+			isDefault
+			relationship: 2d26d35a-d6f9-4429-b3eb-3818aa70e044
+			defaultHierarchy: LocalDateTable_52994651-a681-4c39-b4a3-e5451d63e1ba.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column create_user
+		dataType: string
+		lineageTag: 26d0114e-9865-46b8-beca-d4d9ea5ebe69
+		summarizeBy: none
+		sourceColumn: create_user
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'mortimer_nfl game_stats' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("thefog", "mortimer_dev"),
+				    mortimer_nfl_game_stats = Source{[Schema="mortimer_nfl",Item="game_stats"]}[Data]
+				in
+				    mortimer_nfl_game_stats
+

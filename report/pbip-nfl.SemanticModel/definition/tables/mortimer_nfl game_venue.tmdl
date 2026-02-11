@@ -1,0 +1,61 @@
+table 'mortimer_nfl game_venue'
+	lineageTag: f0cca00f-34e6-44eb-9885-a3baaf1c63c0
+
+	column game_venue_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ca1a4df4-5cfc-465e-ad13-fba48548e340
+		summarizeBy: sum
+		sourceColumn: game_venue_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column game_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b569166-de41-4c61-93b0-e149ec373b61
+		summarizeBy: none
+		sourceColumn: game_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column venue_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ed53cd8a-af8d-4513-9ab4-bfb861963323
+		summarizeBy: none
+		sourceColumn: venue_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 763a7e47-c86f-41b5-93e1-340f56edb777
+		summarizeBy: none
+		sourceColumn: created_date
+
+		variation Variation
+			isDefault
+			relationship: a0c13a7d-966e-4be4-a9e3-32261b3b53d9
+			defaultHierarchy: LocalDateTable_80eb41b8-b599-42df-8492-fa5f11fe19ff.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column create_user
+		dataType: string
+		lineageTag: 7fd8edea-1a50-4988-8204-520eaa59eb83
+		summarizeBy: none
+		sourceColumn: create_user
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'mortimer_nfl game_venue' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("thefog", "mortimer_dev"),
+				    mortimer_nfl_game_venue = Source{[Schema="mortimer_nfl",Item="game_venue"]}[Data]
+				in
+				    mortimer_nfl_game_venue
+

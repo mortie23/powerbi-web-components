@@ -1,0 +1,116 @@
+table 'design_system reference_web_component'
+	lineageTag: 260f4de2-89cf-4ba8-a3b5-d0eac76d008f
+
+	measure TitleBar = ```
+			
+			   
+			   VAR BaseHTML = LOOKUPVALUE('design_system reference_web_component'[component_html], 'design_system reference_web_component'[component_name], "Gold Header")
+			   VAR Title = "NFL Quarterbacks (2014)"
+			   
+			   RETURN
+			   SUBSTITUTE(
+			         BaseHTML, 
+			         "{{TITLE}}", Title
+			       )
+			   
+			```
+		lineageTag: 9f5b811b-9b56-4b33-a33a-74a190a2a67d
+
+	measure MainNavQuarterbacks = ```
+			
+			
+			   VAR BaseTemplate = MAX('design_system reference_web_component'[component_html])
+			   VAR CurrentPage = "Quarterbacks"
+			   
+			   RETURN
+			   SUBSTITUTE(
+			       SUBSTITUTE(
+			           SUBSTITUTE(
+			                       BaseTemplate,
+			                       "[[is_active_link_1]]", IF(CurrentPage = "LINK_1", "is-active", "")
+			                   ),
+			                   "[[is_active_quarterbacks]]", IF(CurrentPage = "Quarterbacks", "is-active", "")
+			               ),
+			               "[[is_active_link_3]]", IF(CurrentPage = "LINK_3", "is-active", "")
+			   )
+			```
+		lineageTag: e3b0ccd5-2b95-47a1-a2d7-ea9ced8c6d4e
+
+	measure CardPassingYards = ```
+			
+			   
+			   VAR BaseHTML = LOOKUPVALUE('design_system reference_web_component'[component_html], 'design_system reference_web_component'[component_name], "Gold Card")
+			   VAR Title = "Total Passing Yards"
+			   
+			   RETURN
+			   SUBSTITUTE(
+			         BaseHTML, 
+			         "{{CARD}}", Title
+			       )
+			```
+		lineageTag: 749d9d30-27ae-4c10-b555-d140710729a2
+
+	measure CardRushingYards = ```
+			
+			   
+			   VAR BaseHTML = LOOKUPVALUE('design_system reference_web_component'[component_html], 'design_system reference_web_component'[component_name], "Gold Card")
+			   VAR Title = "Total Rushing Yards"
+			   
+			   RETURN
+			   SUBSTITUTE(
+			         BaseHTML, 
+			         "{{CARD}}", Title
+			       )
+			```
+		lineageTag: ea4e5ae5-cee2-442d-b73e-0b5e86864088
+
+	column component_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 67ae96aa-e3fa-492d-8aca-2b034932330f
+		summarizeBy: sum
+		sourceColumn: component_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column component_name
+		dataType: string
+		lineageTag: 3c228c5e-a3bf-4fac-ad64-5b0969172f42
+		summarizeBy: none
+		sourceColumn: component_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column component_html
+		dataType: string
+		lineageTag: 76a20242-14df-4d28-8eb0-b884c20c0b1f
+		summarizeBy: none
+		sourceColumn: component_html
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_updated
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b6520562-a825-4bc7-a290-5579f9e29a05
+		summarizeBy: none
+		sourceColumn: last_updated
+
+		variation Variation
+			isDefault
+			relationship: 037063ba-616a-415a-bf00-b7269866e2f9
+			defaultHierarchy: LocalDateTable_9821d29c-108e-46f2-8207-ee5fb5ce46f3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'design_system reference_web_component' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("thefog", "mortimer_dev"),
+				    design_system_reference_web_component = Source{[Schema="design_system",Item="reference_web_component"]}[Data]
+				in
+				    design_system_reference_web_component
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,110 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "0ba6b2255d4bce6fb102",
+  "position": {
+    "x": 0,
+    "y": 651.22523659305989,
+    "z": 2,
+    "height": 68.943488057683638,
+    "width": 1280.0230734565118,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6865",
+    "query": {
+      "queryState": {
+        "content": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "design_system reference_web_component"
+                    }
+                  },
+                  "Property": "MainNavQuarterbacks"
+                }
+              },
+              "queryRef": "design_system reference_web_component.MainNavQuarterbacks",
+              "nativeQueryRef": "MainNavQuarterbacks"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "61e521a5b237eb06d17f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "design_system reference_web_component"
+              }
+            },
+            "Property": "component_name"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "design_system reference_web_component",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "component_name"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Gold Main Nav'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "68518246fd66c1f4f36a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "design_system reference_web_component"
+              }
+            },
+            "Property": "MainNavQuarterbacks"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -1,0 +1,222 @@
+table 'mortimer_nfl player'
+	lineageTag: 46d62034-176d-4f90-bcac-1f81c70b9d37
+
+	column game_player_id
+		dataType: int64
+		formatString: 0
+		lineageTag: f6dc22c0-2ce7-4420-959b-d3d85de99451
+		summarizeBy: sum
+		sourceColumn: game_player_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column week
+		dataType: int64
+		formatString: 0
+		lineageTag: 1086beb8-74c6-41e4-9e01-2b7d8440202c
+		summarizeBy: sum
+		sourceColumn: week
+
+		annotation SummarizationSetBy = Automatic
+
+	column game_id
+		dataType: int64
+		formatString: 0
+		lineageTag: b859f6e5-5ead-4948-87c7-77cb6f2c462b
+		summarizeBy: none
+		sourceColumn: game_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column team_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 2cb361b8-c211-4187-8727-0cf2e007f2ce
+		summarizeBy: none
+		sourceColumn: team_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column home_away
+		dataType: string
+		lineageTag: aedd6e0b-6aff-4a1f-ac14-4a1a342e15ce
+		summarizeBy: none
+		sourceColumn: home_away
+
+		annotation SummarizationSetBy = Automatic
+
+	column player_name
+		dataType: string
+		lineageTag: 5d2ea3e6-e3a1-4161-8370-8cd1db3a0b4f
+		summarizeBy: none
+		sourceColumn: player_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column field_position
+		dataType: string
+		lineageTag: 2cc51f0d-ea14-4b17-b6e6-0f0139e8937b
+		summarizeBy: none
+		sourceColumn: field_position
+
+		annotation SummarizationSetBy = Automatic
+
+	column rushing_attempts
+		dataType: int64
+		formatString: 0
+		lineageTag: c99e37ba-b005-439f-869e-1e82ec37c28c
+		summarizeBy: sum
+		sourceColumn: rushing_attempts
+
+		annotation SummarizationSetBy = Automatic
+
+	column rushing_yards
+		dataType: int64
+		formatString: 0
+		lineageTag: b9a65ebd-74b9-4c82-ba9f-8eb9e0be6f98
+		summarizeBy: sum
+		sourceColumn: rushing_yards
+
+		annotation SummarizationSetBy = Automatic
+
+	column rushing_td
+		dataType: int64
+		formatString: 0
+		lineageTag: e95b1fe6-6a51-4aaf-af3d-5c5c90edc6db
+		summarizeBy: sum
+		sourceColumn: rushing_td
+
+		annotation SummarizationSetBy = Automatic
+
+	column receiving_targets
+		dataType: int64
+		formatString: 0
+		lineageTag: 439f610c-c03b-4031-a16d-7d3ac838bc0e
+		summarizeBy: sum
+		sourceColumn: receiving_targets
+
+		annotation SummarizationSetBy = Automatic
+
+	column receptions
+		dataType: int64
+		formatString: 0
+		lineageTag: 8bb2f9cd-44cb-409c-98f5-f4f142f5f9ac
+		summarizeBy: sum
+		sourceColumn: receptions
+
+		annotation SummarizationSetBy = Automatic
+
+	column receiving_yards
+		dataType: int64
+		formatString: 0
+		lineageTag: 126dcd48-720c-4804-b4d9-a9e00bda0329
+		summarizeBy: sum
+		sourceColumn: receiving_yards
+
+		annotation SummarizationSetBy = Automatic
+
+	column receiving_td
+		dataType: int64
+		formatString: 0
+		lineageTag: f63e99c6-0f50-41ed-bf08-8483e38f01a9
+		summarizeBy: sum
+		sourceColumn: receiving_td
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_td
+		dataType: int64
+		formatString: 0
+		lineageTag: 419075e8-108d-470a-b9d0-7805e8555f70
+		summarizeBy: sum
+		sourceColumn: total_td
+
+		annotation SummarizationSetBy = Automatic
+
+	column fumbles
+		dataType: int64
+		formatString: 0
+		lineageTag: 69e620e0-b435-44d0-8d1f-85514910d7de
+		summarizeBy: sum
+		sourceColumn: fumbles
+
+		annotation SummarizationSetBy = Automatic
+
+	column pass_attempts
+		dataType: int64
+		formatString: 0
+		lineageTag: 82083d56-77d7-4ace-b8db-bc35d8843447
+		summarizeBy: sum
+		sourceColumn: pass_attempts
+
+		annotation SummarizationSetBy = Automatic
+
+	column pass_completions
+		dataType: int64
+		formatString: 0
+		lineageTag: f58fe0d4-8294-48c8-a515-d08de878d306
+		summarizeBy: sum
+		sourceColumn: pass_completions
+
+		annotation SummarizationSetBy = Automatic
+
+	column passing_yards
+		dataType: int64
+		formatString: #,0
+		lineageTag: c8be45f6-f362-469e-ad35-cf6a06e57272
+		summarizeBy: sum
+		sourceColumn: passing_yards
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column passing_td
+		dataType: int64
+		formatString: 0
+		lineageTag: b2fa1a9f-7f9b-4d74-b8c0-f9b002844bb4
+		summarizeBy: sum
+		sourceColumn: passing_td
+
+		annotation SummarizationSetBy = Automatic
+
+	column interceptions
+		dataType: int64
+		formatString: 0
+		lineageTag: e17c7ac6-58a2-4490-a108-c5bb09aa1da0
+		summarizeBy: sum
+		sourceColumn: interceptions
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4b457dc6-c741-4995-b956-4a8cd79b64cb
+		summarizeBy: none
+		sourceColumn: created_date
+
+		variation Variation
+			isDefault
+			relationship: 8cb088ed-fb21-4e96-8017-127626575235
+			defaultHierarchy: LocalDateTable_ac434e9a-c556-4da1-90c7-bfcccc08448a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column create_user
+		dataType: string
+		lineageTag: 00fcfd26-d6bc-4ce9-908a-06971d4ffcde
+		summarizeBy: none
+		sourceColumn: create_user
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'mortimer_nfl player' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("thefog", "mortimer_dev"),
+				    mortimer_nfl_player = Source{[Schema="mortimer_nfl",Item="player"]}[Data]
+				in
+				    mortimer_nfl_player
+

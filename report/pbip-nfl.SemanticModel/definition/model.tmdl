@@ -1,0 +1,36 @@
+model Model
+	culture: en-AU
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-AU
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["mortimer_nfl game","mortimer_nfl game_stats","mortimer_nfl game_type","mortimer_nfl game_venue","mortimer_nfl player","mortimer_nfl team_lookup","mortimer_nfl venue","mortimer_nfl weather","design_system reference_web_component"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'mortimer_nfl game'
+ref table DateTableTemplate_773ad8ec-7f97-41c8-b011-1889725e1c74
+ref table LocalDateTable_9e34a27d-0d33-4a72-87b6-8463bf2c84ca
+ref table 'mortimer_nfl game_stats'
+ref table LocalDateTable_52994651-a681-4c39-b4a3-e5451d63e1ba
+ref table 'mortimer_nfl game_type'
+ref table LocalDateTable_e8be3960-bc06-4306-bc8d-e471476af1cd
+ref table 'mortimer_nfl game_venue'
+ref table LocalDateTable_80eb41b8-b599-42df-8492-fa5f11fe19ff
+ref table 'mortimer_nfl player'
+ref table LocalDateTable_ac434e9a-c556-4da1-90c7-bfcccc08448a
+ref table 'mortimer_nfl team_lookup'
+ref table LocalDateTable_baf0fdc5-35be-4651-95e7-04e98cc5941a
+ref table 'mortimer_nfl venue'
+ref table LocalDateTable_c0e78857-80b9-451f-ab97-b4c962f02c0c
+ref table 'mortimer_nfl weather'
+ref table LocalDateTable_369ec58b-5270-409d-b6c5-f495eab467bb
+ref table 'design_system reference_web_component'
+ref table LocalDateTable_9821d29c-108e-46f2-8207-ee5fb5ce46f3
+
+ref cultureInfo en-AU
+

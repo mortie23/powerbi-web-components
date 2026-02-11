@@ -1,0 +1,145 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "2148e122099eae05f31d",
+  "position": {
+    "x": 655.37845876520953,
+    "y": 289.06426318161334,
+    "z": 4,
+    "height": 362.16097341144661,
+    "width": 624.64461469130231,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "violinPlot4D46EB9EB3A141D9BA2289793175D971",
+    "query": {
+      "queryState": {
+        "measure": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mortimer_nfl player"
+                        }
+                      },
+                      "Property": "passing_yards"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(mortimer_nfl player.passing_yards)",
+              "nativeQueryRef": "Sum of passing_yards"
+            }
+          ]
+        },
+        "sampling": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mortimer_nfl player"
+                    }
+                  },
+                  "Property": "game_id"
+                }
+              },
+              "queryRef": "mortimer_nfl player.game_id",
+              "nativeQueryRef": "game_id"
+            }
+          ]
+        },
+        "category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mortimer_nfl player"
+                    }
+                  },
+                  "Property": "player_name"
+                }
+              },
+              "queryRef": "mortimer_nfl player.player_name",
+              "nativeQueryRef": "player_name"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "dataColours": [
+        {
+          "properties": {
+            "colourByCategory": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3bb5019c08bfb621ff3d",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "mortimer_nfl player"
+                  }
+                },
+                "Property": "passing_yards"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "58955697076dd08a98b3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mortimer_nfl player"
+              }
+            },
+            "Property": "game_id"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0945d89fd995c0ad7bf6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mortimer_nfl player"
+              }
+            },
+            "Property": "player_name"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

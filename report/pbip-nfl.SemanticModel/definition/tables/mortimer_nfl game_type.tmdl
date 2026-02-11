@@ -1,0 +1,51 @@
+table 'mortimer_nfl game_type'
+	lineageTag: 9a17c674-2931-4714-9eb0-dd15e496a95d
+
+	column game_type_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 30245530-24f0-483b-b112-bbd5b5963f00
+		summarizeBy: none
+		sourceColumn: game_type_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column game_type
+		dataType: string
+		lineageTag: b273d146-a9ba-4a60-805e-a3ac385bc04c
+		summarizeBy: none
+		sourceColumn: game_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a806b8d9-2e6f-43c6-af1b-6877da5faf83
+		summarizeBy: none
+		sourceColumn: created_date
+
+		variation Variation
+			isDefault
+			relationship: ed9d9ed6-de69-4c06-a05b-c19e70ba6cbb
+			defaultHierarchy: LocalDateTable_e8be3960-bc06-4306-bc8d-e471476af1cd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column create_user
+		dataType: string
+		lineageTag: fffd96de-84dc-453e-a125-cfdd4e62af4c
+		summarizeBy: none
+		sourceColumn: create_user
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'mortimer_nfl game_type' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("thefog", "mortimer_dev"),
+				    mortimer_nfl_game_type = Source{[Schema="mortimer_nfl",Item="game_type"]}[Data]
+				in
+				    mortimer_nfl_game_type
+

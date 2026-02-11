@@ -1,0 +1,97 @@
+table 'mortimer_nfl weather'
+	lineageTag: 7aec27c9-f758-4ea8-ac28-5f933e7cecf8
+
+	column weather_game_id
+		dataType: int64
+		formatString: 0
+		lineageTag: c3123655-d8bf-43a9-ad84-4019062791b7
+		summarizeBy: sum
+		sourceColumn: weather_game_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column game_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 79501169-d317-4beb-952d-649d139bc6dd
+		summarizeBy: none
+		sourceColumn: game_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column temperature
+		dataType: int64
+		formatString: 0
+		lineageTag: 890dc9a1-2957-4613-ab16-792e45bf4ab8
+		summarizeBy: sum
+		sourceColumn: temperature
+
+		annotation SummarizationSetBy = Automatic
+
+	column weather_condition
+		dataType: string
+		lineageTag: 1f5fd141-4300-454d-bbc5-e17726dba13d
+		summarizeBy: none
+		sourceColumn: weather_condition
+
+		annotation SummarizationSetBy = Automatic
+
+	column wind_speed
+		dataType: int64
+		formatString: 0
+		lineageTag: e0f5be88-5223-4ec2-a944-0211519ffb93
+		summarizeBy: sum
+		sourceColumn: wind_speed
+
+		annotation SummarizationSetBy = Automatic
+
+	column humidity
+		dataType: int64
+		formatString: 0
+		lineageTag: 148e3217-58a0-49bc-8d03-96effd61775d
+		summarizeBy: sum
+		sourceColumn: humidity
+
+		annotation SummarizationSetBy = Automatic
+
+	column wind_direction
+		dataType: string
+		lineageTag: 2f15890f-0317-440c-a6b1-dbcaf85175fb
+		summarizeBy: none
+		sourceColumn: wind_direction
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a0babaf1-984f-461f-8ed4-29104a3a7090
+		summarizeBy: none
+		sourceColumn: created_date
+
+		variation Variation
+			isDefault
+			relationship: d459bff5-4667-4db6-8ef9-32d2818acd20
+			defaultHierarchy: LocalDateTable_369ec58b-5270-409d-b6c5-f495eab467bb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column create_user
+		dataType: string
+		lineageTag: 5a5ef472-b65a-44bf-9de4-ff2a3e7ad7dd
+		summarizeBy: none
+		sourceColumn: create_user
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'mortimer_nfl weather' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("thefog", "mortimer_dev"),
+				    mortimer_nfl_weather = Source{[Schema="mortimer_nfl",Item="weather"]}[Data]
+				in
+				    mortimer_nfl_weather
+
+	annotation PBI_ResultType = Table
+

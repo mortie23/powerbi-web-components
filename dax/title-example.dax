@@ -1,0 +1,11 @@
+TitleBar = 
+   
+   VAR BaseHTML = LOOKUPVALUE('design_system reference_web_component'[component_html], 'design_system reference_web_component'[component_name], "Gold Header")
+   VAR Title = "NFL Quarterbacks (2014)"
+   
+   RETURN
+   SUBSTITUTE(
+         BaseHTML, 
+         "{{TITLE}}", Title
+       )
+   
