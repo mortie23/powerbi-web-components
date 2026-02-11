@@ -23,11 +23,11 @@
                       "Entity": "mortimer_nfl player"
                     }
                   },
-                  "Property": "field_position"
+                  "Property": "Field position"
                 }
               },
               "queryRef": "mortimer_nfl player.field_position",
-              "nativeQueryRef": "field_position",
+              "nativeQueryRef": "Field position",
               "active": true
             }
           ]
@@ -73,7 +73,7 @@
                                   "Source": "m"
                                 }
                               },
-                              "Property": "field_position"
+                              "Property": "Field position"
                             }
                           }
                         ],
@@ -109,7 +109,7 @@
                 "Entity": "mortimer_nfl player"
               }
             },
-            "Property": "field_position"
+            "Property": "Field position"
           }
         },
         "type": "Categorical"

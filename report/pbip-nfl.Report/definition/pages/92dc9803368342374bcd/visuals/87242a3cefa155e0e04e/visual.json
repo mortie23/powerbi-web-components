@@ -23,11 +23,11 @@
                       "Entity": "mortimer_nfl player"
                     }
                   },
-                  "Property": "passing_yards"
+                  "Property": "Passing yards"
                 }
               },
               "queryRef": "mortimer_nfl player.passing_yards",
-              "nativeQueryRef": "passing_yards",
+              "nativeQueryRef": "Passing yards",
               "active": true
             }
           ]
@@ -41,7 +41,7 @@
             "numericStart": {
               "expr": {
                 "Literal": {
-                  "Value": "416D"
+                  "Value": "0D"
                 }
               }
             },
@@ -80,12 +80,12 @@
                                 "Source": "m"
                               }
                             },
-                            "Property": "passing_yards"
+                            "Property": "Passing yards"
                           }
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "416D"
+                            "Value": "0D"
                           }
                         }
                       }
@@ -111,7 +111,7 @@
                 "Entity": "mortimer_nfl player"
               }
             },
-            "Property": "passing_yards"
+            "Property": "Passing yards"
           }
         },
         "type": "Advanced"

@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "mortimer_nfl player.player_name",
-              "nativeQueryRef": "Count of player_name",
+              "nativeQueryRef": "player_name",
               "active": true
             }
           ]
@@ -44,14 +44,14 @@
                           "Entity": "mortimer_nfl player"
                         }
                       },
-                      "Property": "passing_td"
+                      "Property": "Passing Touchdowns"
                     }
                   },
                   "Function": 0
                 }
               },
               "queryRef": "Sum(mortimer_nfl player.passing_td)",
-              "nativeQueryRef": "Sum of passing_td"
+              "nativeQueryRef": "Sum of Passing Touchdowns"
             }
           ]
         }
@@ -68,7 +68,7 @@
                         "Entity": "mortimer_nfl player"
                       }
                     },
-                    "Property": "passing_td"
+                    "Property": "Passing Touchdowns"
                   }
                 },
                 "Function": 0
@@ -89,10 +89,52 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 4,
-                      "Percent": 0
+                      "ColorId": 8,
+                      "Percent": 0.4
                     }
                   }
+                }
+              }
+            },
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "borderTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "54D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total passing yards for each Quarterback'"
                 }
               }
             }
@@ -129,7 +171,7 @@
                     "Entity": "mortimer_nfl player"
                   }
                 },
-                "Property": "passing_td"
+                "Property": "Passing Touchdowns"
               }
             },
             "Function": 0

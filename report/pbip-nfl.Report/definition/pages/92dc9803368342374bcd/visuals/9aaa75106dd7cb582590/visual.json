@@ -25,7 +25,7 @@
                           "Entity": "mortimer_nfl player"
                         }
                       },
-                      "Property": "passing_yards"
+                      "Property": "Passing yards"
                     }
                   },
                   "Function": 0
@@ -50,7 +50,7 @@
                         "Entity": "mortimer_nfl player"
                       }
                     },
-                    "Property": "passing_yards"
+                    "Property": "Passing yards"
                   }
                 },
                 "Function": 0
@@ -220,7 +220,7 @@
                     "Entity": "mortimer_nfl player"
                   }
                 },
-                "Property": "passing_yards"
+                "Property": "Passing yards"
               }
             },
             "Function": 0

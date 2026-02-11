@@ -53,11 +53,11 @@ table 'mortimer_nfl player'
 
 		annotation SummarizationSetBy = Automatic
 
-	column field_position
+	column 'Field position'
 		dataType: string
 		lineageTag: 2cc51f0d-ea14-4b17-b6e6-0f0139e8937b
 		summarizeBy: none
-		sourceColumn: field_position
+		sourceColumn: Field position
 
 		annotation SummarizationSetBy = Automatic
 
@@ -160,23 +160,23 @@ table 'mortimer_nfl player'
 
 		annotation SummarizationSetBy = Automatic
 
-	column passing_yards
+	column 'Passing yards'
 		dataType: int64
 		formatString: #,0
 		lineageTag: c8be45f6-f362-469e-ad35-cf6a06e57272
 		summarizeBy: sum
-		sourceColumn: passing_yards
+		sourceColumn: Passing yards
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	column passing_td
+	column 'Passing Touchdowns'
 		dataType: int64
 		formatString: 0
 		lineageTag: b2fa1a9f-7f9b-4d74-b8c0-f9b002844bb4
 		summarizeBy: sum
-		sourceColumn: passing_td
+		sourceColumn: Passing Touchdowns
 
 		annotation SummarizationSetBy = Automatic
 
@@ -216,7 +216,8 @@ table 'mortimer_nfl player'
 		source =
 				let
 				    Source = PostgreSQL.Database("thefog", "mortimer_dev"),
-				    mortimer_nfl_player = Source{[Schema="mortimer_nfl",Item="player"]}[Data]
+				    mortimer_nfl_player = Source{[Schema="mortimer_nfl",Item="player"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(mortimer_nfl_player,{{"field_position", "Field position"}, {"passing_yards", "Passing yards"}, {"passing_td", "Passing Touchdowns"}, {"player_name", "player_name"}})
 				in
-				    mortimer_nfl_player
+				    #"Renamed Columns"
 
